@@ -39,3 +39,12 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
   * This causes a loss of connectivty with attached network segments.
 
 [Physical Layer problems and causes](imgs/layer_1.png)
+
+
+# Data Link Layer Troubleshooting
+## Common symproms
+* **No functionality or connectivity at L2 or above**
+  * some problems can stop the exchange of frames stopping the conectivity
+  * some others just cause the network performancen degradation
+ * **Network is operating below baselaaine perfomance levels**
+   *  
