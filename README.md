@@ -45,8 +45,11 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 * **No functionality or connectivity at L2 or above**
   * some problems can stop the exchange of frames stopping the conectivity
   * some others just cause the network performancen degradation
- * **Network is operating below baselaaine perfomance levels**
-   *  
+* **Network is operating below baselaaine perfomance levels**
+  * the frames take anormal path which causes that the frame arrives but generates unexpected high-bandwidth
+  * the frames are dropped and identified like errors messages that are shown in the router or switc
+*  **Excessive broadcasts**
+  * OSs use broadcast 
 
 
 # Transport Layer
