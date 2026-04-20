@@ -51,3 +51,9 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 
 # Transport Layer
 ## ACLs
+* **Symptoms**
+* Connectivity Issues
+* Access Issuess
+* **Causes**
+* ACL configurations
+* NAT configurations
