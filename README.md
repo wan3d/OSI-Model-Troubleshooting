@@ -40,7 +40,6 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 
 [Physical Layer problems and causes](imgs/layer_1.png)
 
-
 # Data Link Layer Troubleshooting
 ## Common symproms
 * **No functionality or connectivity at L2 or above**
@@ -48,3 +47,7 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
   * some others just cause the network performancen degradation
  * **Network is operating below baselaaine perfomance levels**
    *  
+
+
+# Transport Layer
+## ACLs
