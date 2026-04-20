@@ -58,15 +58,15 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 
 ## Causes to Investigate
 * **General network issues**
-* Recent changes in the network topology, such as down links or the installation/removal of routes.
+ Recent changes in the network topology, such as down links or the installation/removal of routes.
 * **Connectivity issues**
-* Hardware failures, power outages, environmental problems (overheating), or Layer 1 problems (bad cables/ports).
+ Hardware failures, power outages, environmental problems (overheating), or Layer 1 problems (bad cables/ports).
 * **Routing table**
-* Improperly configured static routes or missing/unexpected dynamic routes (using debug commands is highly recommended here).
+ Improperly configured static routes or missing/unexpected dynamic routes (using debug commands is highly recommended here).
 * **Neighbor issues**
-* Failures in establishing an adjacency with neighboring routers.
+  Failures in establishing an adjacency with neighboring routers.
 * **Topology database** 
-* Unexpected or missing entries within the routing protocol's topology table.
+ Unexpected or missing entries within the routing protocol's topology table.
 
 
 # Transport Layer
