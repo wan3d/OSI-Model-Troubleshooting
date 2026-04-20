@@ -75,3 +75,29 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 * SNMP
 * Tunneling and ecryption protocols
 
+# Application Layer Troubleshooting
+Application layer protocols usually provide user services. Those protocols are typically used for network management, file transfer, distributed file services, terminal emulation and email.
+
+The following figure shows the most widely known and implemented TCP/IP application layer protocols
+[Application Layer](imgs/layer_7.png)
+
+## Protocols
+* **SSH/Telnet**
+  * Enables user to establish terminal session connections with remote hosts.
+* **HTTP**
+  * Supports the exchanging of text, graphic images, sound, video and other.
+* **FTP**
+  * Performs interactive file transfers between hosts.
+* **TFTP**
+  *  Performs basic interactive file transfers.
+* **SMTP**
+  * Supports basic message delivery services.
+* **POP**
+  * Connects to mail servers and downloads email.
+* **SNMP**
+  * Management devices in networks.
+* **DNS**
+  * Maps IP addresses to names assigned to devices.
+* **Network File System (NFS)**
+  * Storage protocol that allows devices to access shared files in a remote server.
+
