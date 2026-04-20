@@ -51,9 +51,27 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 
 # Transport Layer
 ## ACLs
-* **Symptoms**
-* Connectivity Issues
-* Access Issuess
-* **Causes**
-* ACL configurations
-* NAT configurations
+**Symptoms**
+  * Connectivity Issues
+  * Access Issuess
+**Causes**
+  * ACL configurations
+  * NAT configurations
+ 
+**The most common issues with ACLs are caused by improper configuration:**
+* Selection of traffic flow
+* Order of ACL entries
+* Implicit deny any
+* Address an IPv4 wildcard masks
+* Selection of transport layer protocol
+* Source and destination ports
+* Use of the established keyword
+* Uncommon protocols
+
+## NAT for IPv4
+**Common Interoperability Areas**
+* BOOTP and DHCP
+* DNS and WINS
+* SNMP
+* Tunneling and ecryption protocols
+
