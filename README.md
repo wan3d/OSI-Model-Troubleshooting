@@ -38,14 +38,16 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
   * Misconfigurations such as incorrect clock rate, incorrect clock source and interface not being turned on.
   * This causes a loss of connectivty with attached network segments.
 
-[Physical Layer problems and causes](imgs/layer_1.png)
+![Physical Layer problems and causes](imgs/layer_1.png)
 
 # Data Link Layer Troubleshooting
-## Common symproms
+## Common symptoms
 * **No functionality or connectivity at L2 or above**
   * some problems can stop the exchange of frames stopping the conectivity
   * some others just cause the network performancen degradation
  * **Network is operating below baselaaine perfomance levels**
+
+![Data Link Layer problems and causes](imgs/layer_2.png)
 
 # Network Layer Troubleshooting
 * Problems at this layer (involving protocols like IPv4, OSPF, or EIGRP) generally break down into two main symptoms and five underlying causes that need to be investigated methodically.
@@ -68,6 +70,7 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 * **Topology database** 
  Unexpected or missing entries within the routing protocol's topology table.
 
+![Network Layer problems and causes](imgs/layer_3.png)
 
 # Transport Layer
 ## ACLs
@@ -77,6 +80,8 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 **Causes**
   * ACL configurations
   * NAT configurations
+
+![Transport Layer problems and causes](imgs/layer_4.png)
  
 **The most common issues with ACLs are caused by improper configuration:**
 * Selection of traffic flow
@@ -88,6 +93,8 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 * Use of the established keyword
 * Uncommon protocols
 
+![Common ACL misconfigurations](imgs/acl_misconfiguration.png)
+
 ## NAT for IPv4
 **Common Interoperability Areas**
 * BOOTP and DHCP
@@ -95,11 +102,14 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 * SNMP
 * Tunneling and ecryption protocols
 
+![Common Interoperability Areas](imgs/interoperability.png)
+
 # Application Layer Troubleshooting
 Application layer protocols usually provide user services. Those protocols are typically used for network management, file transfer, distributed file services, terminal emulation and email.
 
-The following figure shows the most widely known and implemented TCP/IP application layer protocols
-[Application Layer](imgs/layer_7.png)
+![Application Layer](imgs/layer_7.png)
+
+The following figure shows the most widely known and implemented TCP/IP application layer protocols:
 
 ## Protocols
 * **SSH/Telnet**
