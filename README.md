@@ -1,88 +1,80 @@
 # OSI Model Troubleshooting
-In this module we are going to get some knowledge of troubleshooting methods and the software and hardware tools to use to diagnose problems. This module covers the most common issues that you will find when troubleshooting a network.
 
-# Physical Layer problems
-Issues on a network often present as performance problems. Performance problems mean that here is a difference between the expected behavior and the observer behavior. Failures and suboptimal conditions at the physical layer not only incovenience user but can impact the productivity of the entire company.
+This guide provides a structured approach to identifying, diagnosing, and resolving network issues across the various layers of the OSI model.
 
-Due upper layers of the OSI model depend on the physical layer to function, an administrator must have the ability to effectively isolate and correct them.
+## Table of Contents
+1. [Physical Layer Troubleshooting](#1-physical-layer-troubleshooting)
+2. [Data Link Layer Troubleshooting](#2-data-link-layer-troubleshooting)
+3. [Network Layer Troubleshooting](#3-network-layer-troubleshooting)
+4. [Transport Layer Troubleshooting](#4-transport-layer-troubleshooting)
+5. [Application Layer Troubleshooting](#5-application-layer-troubleshooting)
+6. [Key Concepts Glossary](#6-key-concepts-glossary)
 
-## Common Physical layer symptoms
-* **Performance lower than baseline**
-  * Requires previous baselines for comparision.
-  * Most common reasons include overloaded or underpowered servers, traffic congestion on a link and chronic frame loss.
-* **Loss of connectivity**
-  * Could be due to a failed or disconnected cable.
-  * Can be verified using a simple ping test.
-* **Network bottlenecks or congestion**
-  * If a device or interface fails, routing protocols may redirect traffic to other routes that are not capable to carry the extra capacity.
-  * This resuls on congestion in parts of the network.
-* **High CPU utilization rates**
-  * Are a symptom that a device is operating at or exceeding its design limits.
-  * Can cause a device to shut down or fail if it is not solved quickly.
-* **Console error messages**
-  * Error messages reported on the device console could indicate a physical layer problem.
-  * Console messages should be logged to a central syslog server.
+---
 
-## Common Physical layer causes
-* **Power-related**
-  * Most fundamental reason for network failure.
-  * If other nearby units have also powered down, suspect a power failure at the main power supply.
-* **Cabling faults**
-  * Many problems can be corrected by simply reseating cables that have become partially disconnected.
-  * Look for damaged cables, improper cable types and connectors.
-  * Suspect cables should be tested with a known functioning cable.
-* **Attenuation**
-  * If a cable length exceeds the design limit for the media.
-  * If is severe, the receiving device cannot always succesfully distinguish one bit in the data stream from another bit.
-* **Interface configuration errors**
-  * Misconfigurations such as incorrect clock rate, incorrect clock source and interface not being turned on.
-  * This causes a loss of connectivty with attached network segments.
+## 1. Physical Layer Troubleshooting
+The physical layer represents the hardware foundation of your network. Problems here often manifest as performance issues or total loss of connectivity.
 
 ![Physical Layer problems and causes](imgs/layer_1.png)
 
-# Data Link Layer Troubleshooting
-## Common symptoms
-* **No functionality or connectivity at L2 or above**
-  * some problems can stop the exchange of frames stopping the conectivity
-  * some others just cause the network performancen degradation
- * **Network is operating below baselaaine perfomance levels**
+### Symptoms
+* **Performance lower than baseline:** Requires previous baselines for comparison. Most common reasons include overloaded or underpowered servers, traffic congestion, and chronic frame loss.
+* **Loss of connectivity:** Could be due to a failed or disconnected cable.
+* **Network bottlenecks or congestion:** If a device fails, routing protocols may redirect traffic to routes not capable of carrying the extra capacity.
+* **High CPU utilization rates:** A symptom that a device is operating at or exceeding its design limits.
+* **Console error messages:** Could indicate a physical layer problem.
+
+### Common Causes
+* **Power-related:** Most fundamental reason for network failure.
+* **Cabling faults:** Damaged cables, improper cable types, and connectors.
+* **Attenuation:** If a cable length exceeds the design limit for the media, the receiving device cannot distinguish bits.
+* **Interface configuration errors:** Incorrect clock rate, incorrect clock source, or interface not turned on.
+
+---
+
+## 2. Data Link Layer Troubleshooting
+Layer 2 handles the framing and transmission of data between connected devices on the same link.
 
 ![Data Link Layer problems and causes](imgs/layer_2.png)
 
-# Network Layer Troubleshooting
-* Problems at this layer (involving protocols like IPv4, OSPF, or EIGRP) generally break down into two main symptoms and five underlying causes that need to be investigated methodically.
+### Symptoms
+* **No functionality or connectivity at L2 or above:** Can stop the exchange of frames.
+* **Network operating below baseline:** Performance degradation.
 
-## Symptoms
-* **Network failure: A total loss of service.**
-* It affects all users and applications, making it critical and easy to notice quickly.
-**Suboptimal performance:** 
-* Slowness or glitches affecting only a subset of users or specific traffic. It is difficult to isolate and diagnose because it can involve multiple layers.
+---
 
-## Causes to Investigate
-* **General network issues**
- Recent changes in the network topology, such as down links or the installation/removal of routes.
-* **Connectivity issues**
- Hardware failures, power outages, environmental problems (overheating), or Layer 1 problems (bad cables/ports).
-* **Routing table**
- Improperly configured static routes or missing/unexpected dynamic routes (using debug commands is highly recommended here).
-* **Neighbor issues**
-  Failures in establishing an adjacency with neighboring routers.
-* **Topology database** 
- Unexpected or missing entries within the routing protocol's topology table.
+## 3. Network Layer Troubleshooting
+This layer involves logic like IPv4, OSPF, and EIGRP. Problems generally break down into two main symptoms and five underlying causes.
 
 ![Network Layer problems and causes](imgs/layer_3.png)
 
-# Transport Layer
-## ACLs
-**Symptoms**
-  * Connectivity Issues
-  * Access Issuess
-**Causes**
-  * ACL configurations
-  * NAT configurations
+### Symptoms
+* **Network failure:** A total loss of service affecting all users and applications.
+* **Suboptimal performance:** Slowness or glitches affecting only a subset of users or specific traffic.
+
+### Causes to Investigate
+* **General network issues:** Recent changes in topology, such as down links or installation/removal of routes.
+* **Connectivity issues:** Hardware failures, power outages, environmental problems (overheating), or Layer 1 problems.
+* **Routing table:** Improperly configured static routes or missing/unexpected dynamic routes.
+* **Neighbor issues:** Failures in establishing an adjacency with neighboring routers.
+* **Topology database:** Unexpected or missing entries within the routing protocol's topology table.
+
+---
+
+## 4. Transport Layer Troubleshooting
+Troubleshooting at this layer typically focuses on security policies and address translation.
 
 ![Transport Layer problems and causes](imgs/layer_4.png)
- 
+
+### ACLs
+**Symptoms**
+* Connectivity Issues
+* Access Issues
+
+**Causes**
+* ACL configurations
+* NAT configurations
+
 **The most common issues with ACLs are caused by improper configuration:**
 * Selection of traffic flow
 * Order of ACL entries
@@ -95,39 +87,48 @@ Due upper layers of the OSI model depend on the physical layer to function, an a
 
 ![Common ACL misconfigurations](imgs/acl_misconfiguration.png)
 
-## NAT for IPv4
-**Common Interoperability Areas**
-* BOOTP and DHCP
-* DNS and WINS
-* SNMP
-* Tunneling and ecryption protocols
+### NAT for IPv4
+NAT modifies IP headers to allow private devices to reach the public internet, but it can break protocols that carry IP addressing information inside their data payload.
+
+**Common Interoperability Areas (Why protocols fail with NAT)**
+* **BOOTP and DHCP:** These protocols embed IP configuration in the packet data; NAT cannot translate these internal addresses.
+* **DNS and WINS:** NAT may fail to map internal naming requests to external IP responses.
+* **SNMP:** Management traffic often includes internal IP references that get lost during translation.
+* **Tunneling and encryption protocols:** NAT modifies headers, which invalidates the cryptographic integrity checks used in protocols like IPsec.
 
 ![Common Interoperability Areas](imgs/interoperability.png)
 
-# Application Layer Troubleshooting
-Application layer protocols usually provide user services. Those protocols are typically used for network management, file transfer, distributed file services, terminal emulation and email.
+---
+
+## 5. Application Layer Troubleshooting
+This layer provides services directly to the user (email, file transfer, terminal emulation). When physical, network, and transport layers are functional, investigate the service logic here.
 
 ![Application Layer](imgs/layer_7.png)
 
-The following figure shows the most widely known and implemented TCP/IP application layer protocols:
+### Troubleshooting Approach
+* **Service Availability:** Is the application daemon or service actually running on the server?
+* **Port Listening:** Verify that the server is listening on the expected TCP/UDP port (e.g., via `netstat` or `ss`).
+* **Protocol Mismatch:** Are both client and server speaking the same version of the protocol?
+* **Authentication/Authorization:** Is access denied due to invalid credentials rather than a network block?
+* **DNS Resolution:** Can the client resolve the domain name to the correct IP address?
 
-## Protocols
-* **SSH/Telnet**
-  * Enables user to establish terminal session connections with remote hosts.
-* **HTTP**
-  * Supports the exchanging of text, graphic images, sound, video and other.
-* **FTP**
-  * Performs interactive file transfers between hosts.
-* **TFTP**
-  *  Performs basic interactive file transfers.
-* **SMTP**
-  * Supports basic message delivery services.
-* **POP**
-  * Connects to mail servers and downloads email.
-* **SNMP**
-  * Management devices in networks.
-* **DNS**
-  * Maps IP addresses to names assigned to devices.
-* **Network File System (NFS)**
-  * Storage protocol that allows devices to access shared files in a remote server.
+### Protocols
+* **SSH/Telnet:** Enables user to establish terminal session connections with remote hosts.
+* **HTTP:** Supports the exchanging of text, graphic images, sound, video, and other.
+* **FTP:** Performs interactive file transfers between hosts.
+* **TFTP:** Performs basic interactive file transfers.
+* **SMTP:** Supports basic message delivery services.
+* **POP:** Connects to mail servers and downloads email.
+* **SNMP:** Management devices in networks.
+* **DNS:** Maps IP addresses to names assigned to devices.
+* **Network File System (NFS):** Storage protocol that allows devices to access shared files in a remote server.
 
+---
+
+## 6. Key Concepts Glossary
+* **Baseline:** A snapshot of "normal" network performance used for comparison.
+* **Attenuation:** The natural weakening of a signal as it travels over a wire.
+* **Adjacency:** The "handshake" between two routers needed to exchange routing information.
+* **Topology Database:** A router's internal "map" of the network and all known routes.
+* **ACL (Access Control List):** A security filter applied to an interface to allow or drop packets.
+* **NAT (Network Address Translation):** Method to modify IP addresses, allowing private devices to share a public IP.
