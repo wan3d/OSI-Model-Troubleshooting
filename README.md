@@ -134,10 +134,10 @@ This layer provides services directly to the user (email, file transfer, termina
 * **ACL (Access Control List):** A security filter applied to an interface to allow or drop packets.
 * **NAT (Network Address Translation):** Method to modify IP addresses, allowing private devices to share a public IP.
 
-# Let's learn while playing!
+## Let's learn while playing!
 Once you read this summarize about troubleshooting in the OSI Model, then you are ready to play and learn at the same time. We are going to **gimkit**, a platform where students answer questions in their own devices while they're competing against others to be the best.
 
 ## How to access?
-To start playing you will have to clic [here](gimkit.com/join)
+To start playing you will have to click: gimkit.com/join
 
 Once you are there, you will have to enter the code provided by one of us! 
