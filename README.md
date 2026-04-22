@@ -9,7 +9,7 @@ This guide provides a structured approach to identifying, diagnosing, and resolv
 4. [Transport Layer Troubleshooting](#4-transport-layer-troubleshooting)
 5. [Application Layer Troubleshooting](#5-application-layer-troubleshooting)
 6. [Key Concepts Glossary](#6-key-concepts-glossary)
-7. [Minigame](#7-let's-learn-while-playing!)
+7. [Minigame](#7-lets-learn-while-playing)
 
 ---
 
@@ -138,6 +138,6 @@ This layer provides services directly to the user (email, file transfer, termina
 Once you read this summarize about troubleshooting in the OSI Model, then you are ready to play and learn at the same time. We are going to **gimkit**, a platform where students answer questions in their own devices while they're competing against others to be the best.
 
 ## How to access?
-To start playing you will have to go to **gimkit.com/join**
+To start playing you will have to clic [here](gimkit.com/join)
 
 Once you are there, you will have to enter the code provided by one of us! 
